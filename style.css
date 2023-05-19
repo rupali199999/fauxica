@@ -236,3 +236,13 @@ nav ul li a:hover::before {
     }
     
 }
+
+main{
+    animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+    transform: scale(.4);
+}
+@keyframes growIn {
+    to{
+        transform: scale(1);
+    }
+}
