@@ -176,6 +176,7 @@ p.details{
     padding: 2em;
     border-radius: 0.6rem;
     justify-content: space-between;
+    transition: transform 800ms;
 }
 .card-details a{
     color: black;
@@ -210,4 +211,28 @@ nav ul li a:hover::before {
 }
 .card:hover{
     background-size: 160%;
+}
+.card:hover .card-details{
+    transform: translateY(-20px);
+}
+/* Intro animation */
+
+.overlay{
+    position: absolute;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    height: 100%;
+    animation: reveal 1s ease-in forwards;
+    transform-origin: bottom;
+}
+
+@keyframes reveal {
+    from{
+        transform: scaleY(1);
+    }
+    to{
+        transform: scaleY(0);
+    }
+    
 }
